@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to the Aamir's DevOPs World</title>
+  <style>
+    body {
+      background-color: #f6d55c; /* Yellow */
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    h1 {
+      color: #3caea3; /* Green */
+      font-size: 3em;
+      text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+      cursor: pointer; /* Change cursor to pointer on hover */
+    }
+  </style>
+</head>
+<body>
+  <h1 onclick="toggleColors()">Welcome to the Aamir's DevOPs World<</h1>
+
+  <script>
+    function toggleColors() {
+      var colors = ['#ff6347', '#ffa500', '#ffd700', '#00ff7f', '#40e0d0']; // Different colors to toggle
+      var currentIndex = 0;
+      var h1Element = document.querySelector('h1');
+      setInterval(function() {
+        h1Element.style.backgroundColor = colors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+      }, 500); // Change color every 500 milliseconds (half a second)
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+<!--DOCKER Command:- docker run -it -d -p 80:80 -v vol1:/usr/local/apache2/htdocs/ --name web-page httpd -->
